@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='show_all.css') }}">
+
+</head>
+<body>
+                <h1>add dojo</h1>
+                <form action="/redirecttoinfo"  method="post">
+                    <label for=" name"> name</label>
+                    <input type="text" name="name">
+                    <input type="submit">
+                </form>
+                
+                    <h1>alldojos</h1>
+                    {%for dojos in alldojos%}
+                    <p>{{dojos.name}}</p>
+                    {%endfor%}
+                   
+                    
+                    <p></p>
+                   <a href="/master">dojo details</a> 
+                  
+                   
+                   <p>
+                   
+                    
+<a href="/newninja">addninja</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
